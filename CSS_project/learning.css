@@ -1,0 +1,31 @@
+ul{
+    background-color: blanchedalmond;
+}
+h3{
+    /* font-size: 50px; */
+    color: red;
+}
+#box1{
+    background-color: black;
+    height: 50px;
+    width: 100px;
+    /* display: inline; */
+    display: inline-block;
+    color: white;
+}
+
+#link-1{
+    background-color: aqua;
+    height: 50px;
+    width: 200px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    display: block;
+}
+button{
+    height: 50px;
+    width: 100px;
+}

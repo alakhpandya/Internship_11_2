@@ -1,0 +1,148 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 
+html{
+    font-size: 16px;
+} */
+body{
+    background-color: #F4EDD3;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* ------------------- Navbar ------------------- */
+.nav-container{
+    height: 5rem;
+    overflow: hidden;
+    background-color: black;
+    transition: 0.5s;
+}
+.show-dropdown{
+    height: 16.2rem;
+}
+.navbar{
+    background-color: #4C585B;
+    height: 5rem;
+    display: flex;
+    /* gap: 50px; */
+    /* justify-content: center; */
+    justify-content: space-between;
+    align-items: center;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    /* padding: 20px; */
+    /* padding: 20px 40px; */
+    padding: 0 20px;
+}
+
+.nav-logo, .bar-icon{
+    font-size: 40px;
+    /* color: gold; */
+    color: #F4EDD3;
+    cursor: pointer;
+}
+.nav-logo{
+    font-family: "Playwrite IN", serif;
+    font-weight: 600;
+}
+
+.navbar-dropdown{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    background-color: #A5BFCC;
+    padding: 1.5rem 20px;
+}
+.nav-link{
+    /* color: #4C585B; */
+    color: black;
+}
+#international{
+    margin: 1.5rem 0;
+}
+
+.banner{
+    background-color: #7E99A3;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.card{
+    background-color: #F4EDD3;
+    /* width: fit-content; */
+    width: 350px;
+    /* height: 450px; */
+    /* margin: auto; */
+    border: #F4EDD3 solid;
+}
+.card-img{
+    width: 100%;
+}
+.card-lower{
+    padding: 0 10px;
+    padding-bottom: 15px;
+}
+.product-name{
+    font-family: cursive;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.product-description{
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    color: #4C585B;
+    margin: 10px 0;
+}
+.product-price{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+.cancelled{
+    text-decoration: line-through;
+    color: #4C585B;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 800px){
+    .bar-icon{
+        display: none;
+    }
+    .nav-container{
+        background-color: #4C585B;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 20px;
+    }
+    .navbar-dropdown{
+        background-color: #4C585B;
+        /* background-color: #A5BFCC; */
+        padding: 0;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    #international{
+        margin: 0;
+    }
+    .nav-menu{
+        background-color: #F4EDD3;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        border: 1px solid #F4EDD3;
+    }
+    .nav-menu:hover{
+        background-color: #4C585B;
+    }
+    .nav-menu:hover .nav-link{
+        color: #F4EDD3;
+    }
+}
