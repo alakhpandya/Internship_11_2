@@ -2,13 +2,30 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 /* 
 html{
     font-size: 16px;
 } */
+:root{
+    --black: #000;
+    --darkest-color: #283618;
+    --dark-color: #606c38;
+    --medium-color: #bc6c25;
+    --light-color: #dda15e;
+    --lightest-color: #fefae0;
+    --white: rgb(255, 255, 255);
+    --red: gold;
+
+    --brand-fonts: "Playwrite IN", serif;
+    --title-fonts: "Play", serif;
+    --normal-text-fonts: "Poppins", serif;
+    --btn-fonts: "Ubuntu", serif;
+}
+
 body{
-    background-color: #F4EDD3;
+    background-color: var(--lightest-color);
 }
 ul{
     list-style-type: none;
@@ -16,19 +33,26 @@ ul{
 a{
     text-decoration: none;
 }
+.btn{
+    font-family: var(--btn-fonts);
+}
+.site-title{
+    font-family: var(--title-fonts);
+}
+
 
 /* ------------------- Navbar ------------------- */
 .nav-container{
     height: 5rem;
     overflow: hidden;
-    background-color: black;
+    background-color: var(--black);
     transition: 0.5s;
 }
 .show-dropdown{
     height: 16.2rem;
 }
 .navbar{
-    background-color: #4C585B;
+    background-color: var(--darkest-color);
     height: 5rem;
     display: flex;
     /* gap: 50px; */
@@ -45,45 +69,116 @@ a{
 .nav-logo, .bar-icon{
     font-size: 40px;
     /* color: gold; */
-    color: #F4EDD3;
+    color: var(--lightest-color);
     cursor: pointer;
 }
 .nav-logo{
-    font-family: "Playwrite IN", serif;
+    font-family: var(--brand-fonts);
     font-weight: 600;
 }
 
 .navbar-dropdown{
     font-family: sans-serif;
     font-size: 1.5rem;
-    background-color: #A5BFCC;
+    background-color: var(--medium-color);
     padding: 1.5rem 20px;
 }
 .nav-link{
     /* color: #4C585B; */
-    color: black;
+    color: var(--black);
 }
 #international{
     margin: 1.5rem 0;
 }
 
 .banner{
-    background-color: #7E99A3;
+    background-color: var(--light-color);
     padding: 5rem 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem; */
+}
+/* --------------------- Owl Carousel --------------------- */
+.owl-nav{
+    /* background-color: red; */
+    position: absolute; 
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.owl-item{
     display: flex;
     justify-content: center;
-    gap: 100px;
 }
+.owl-next, .owl-prev{
+    color: var(--red) !important;
+}
+.nav-arrow{
+    font-size: 2rem;
+}
+
+/* --------------------- Cards --------------------- */
+
 .card{
-    background-color: #F4EDD3;
+    background-color: var(--lightest-color);
     /* width: fit-content; */
     width: 350px;
     /* height: 450px; */
     /* margin: auto; */
-    border: #F4EDD3 solid;
+    border: var(--lightest-color) solid;
 }
+.card-upper{
+    position: relative;
+    overflow: hidden;
+}
+
 .card-img{
     width: 100%;
+}
+.circle{
+    background-color: var(--darkest-color);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    padding-top: 35px;
+    position: absolute;
+    top: -20px;
+    right:-15px;
+}
+.circle p{
+    color: var(--lightest-color);
+}
+.discount{
+    font-size: 2.5rem;
+    padding-left: 5px;
+    line-height: 2rem;
+}
+.off{
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+.heart-icon{
+    color: var(--red);
+    font-size: 2.5rem;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+.designer-heart{
+    color: red;
+}
+.rating{
+    color: var(--red);
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 15px;
+    left: 5px;
 }
 .card-lower{
     padding: 0 10px;
@@ -97,7 +192,7 @@ a{
 .product-description{
     font-family: sans-serif;
     font-size: 1.1rem;
-    color: #4C585B;
+    color: var(--dark-color);
     margin: 10px 0;
 }
 .product-price{
@@ -106,8 +201,11 @@ a{
 }
 .cancelled{
     text-decoration: line-through;
-    color: #4C585B;
+    color: var(--darkest-color);
 }
+
+
+
 
 
 
@@ -117,13 +215,13 @@ a{
         display: none;
     }
     .nav-container{
-        background-color: #4C585B;
+        background-color: var(--dark-color);
         display: flex;
         justify-content: space-between;
         padding-right: 20px;
     }
     .navbar-dropdown{
-        background-color: #4C585B;
+        background-color: var(--dark-color);
         /* background-color: #A5BFCC; */
         padding: 0;
         display: flex;
@@ -134,15 +232,20 @@ a{
         margin: 0;
     }
     .nav-menu{
-        background-color: #F4EDD3;
+        background-color: var(--lightest-color);
         padding: 0.5rem 1rem;
         border-radius: 8px;
-        border: 1px solid #F4EDD3;
+        border: 1px solid var(--lightest-color);
     }
     .nav-menu:hover{
-        background-color: #4C585B;
+        background-color: var(--darkest-color);
     }
     .nav-menu:hover .nav-link{
-        color: #F4EDD3;
+        color: var(--lightest-color);
     }
+}
+@media (min-width: 1200px) {
+    /* .banner{
+        flex-direction: row;
+    } */
 }
